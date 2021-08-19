@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+}
+
+header, .header_wrapper {
+    width :100%;
+}
+
+.hero_banner {
+    align-items: center;
+    /* background: linear-gradient(45deg, rgb(202, 57, 32), rgb(90, 18, 158)); */
+    background: black;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero_banner h1, .hero_banner h3 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    text-align: center;
+}
+
+.ancient_font {
+    font-family: 'MedievalSharp', cursive;
+}
+
+.sexy_font {
+    font-family: 'Playball', cursive;
+}
+
+.error {
+    background: red;
+    border-radius: 4px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: fixed;
+    right: 10px;
+    z-index: 100;
+}
+
+.error_btn {
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: -8px;
+    margin-right: -10px;
+}
+
+.error_text {
+    color: white;
+    font-family: monospace;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+}
+
+.footer {
+    background: black;
+    height: 60px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer_content {
+    color: white;
+}
+
+.title_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.attribute_section .stats_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.attribute_section .stats_wrapper input{
+    margin: 0 0 0 5px;
+}
+
+.attribute_section .stats_wrapper input:first-of-type{
+    margin: 0 40px 0 5px;
+}
+
+.attributes_wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 70px 1fr;
+    grid-row-gap: 2px;
+    margin: auto;
+    width: fit-content;
+}
+
+.skills_section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.available_points_wrapper {
+    margin-bottom: 15px;
+}
+
+.skills_wrapper{
+    display: grid;
+    grid-row-gap: 2px;
+    grid-template-columns: 140px 1fr;
+}
+
+.unique_section {
+    margin: 10px 5%;
+}
+
+.unique_wrapper h5 {
+    font-size: 1.2em;
+}
+
+.unique_wrapper ul {
+    list-style: none;
+}
+
+.unique_wrapper strong {
+    font-family: 'Playball', cursive;
+}
+.description_section {
+    margin: 10px 5%;
+}
+
+.description_text {
+    font-size: 1.15em;
+}
+
+.description_text::first-letter {
+    float: left;
+    font-size: 2em;
+    line-height: 0.5em;
+}
+
+.submit_section {
+    margin: 10px 5%;
+}
+
+.submit_btn_wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.submit_btn_wrapper button {
+    background: #9a9aaa;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px -2px black;
+    color: white;
+    display: block;
+    font-family: 'Playball', cursive;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 20px;
+    text-shadow: 3px 3px 10px black;
+}
+
+.submit_btn_wrapper button:hover {
+    background: #6363af;
+}
+
+@media print {
+    header, .submit_section, .footer {
+        display: none;
+    }
+}

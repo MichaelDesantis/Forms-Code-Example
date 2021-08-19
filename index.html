@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" type="text/css"></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <script async defer src="./app.js" type="text/javascript"></script>
+    <title>JS controlled forms</title>
+  </head>
+  <body>
+    <noscript>
+      <h1>YOU HAVE DISABLED THE JAVASCRIPTS?! FOOL! YOU HAVE UNDONE THE NATURAL ORDER!!!</h1>
+    </noscript>
+    <header>
+      <div class="header_wrapper">
+        <div class="hero_banner">
+          <h1>Character Generator</h1>
+          <h3>Choose your destiny, or seal your fate. The choice is yours...</h3>
+        </div>
+      </div>
+    </header>
+    <main>
+      <form>
+        <section class="section title_section">
+          <div class="input_wrapper name_wrapper">
+            <label class="sexy_font" for="char_name">Character Name</label>
+            <input class="sexy_font" id="nameInput" name="char_name" maxlength="30" type="text"/>
+          </div>
+          <div class="input_wrapper class_wrapper">
+            <label class="sexy_font" for="class_name">Class</label>
+            <select id="classInput" name="class_name" required>
+              <optgroup label="Available Classes">
+                <!-- Default select option -->
+                <option selected>Archer</option>
+                <option>Assassin</option>
+                <option>Engineer</option>
+                <option>Guard</option>
+                <option>Knight</option>
+                <option>Mage</option>
+                <option>Merchant</option>
+                <option>Priest</option>
+              </optgroup>
+              <optgroup label="Restricted Classes" disabled>
+                <option>Paladin</option>
+                <option>Wizard</option>
+                <option>Barbarian</option>
+                <option>Cleric</option>
+                <option>Thief</option>
+                <option>Noble</option>
+                <option>Rogue</option>
+              </optgroup>
+            </select>
+          </div>
+        </section>
+        <section class="section attribute_section">
+          <div class="input_wrapper stats_wrapper">
+            <label for="health">Health</label>
+            <input id="healthInput" name="health" type="number" readonly disabled>
+            <label for="magicka">Magicka</label>
+            <input id="magickaInput" name="magicka" type="number" readonly disabled>
+          </div>
+          <div class="input_wrapper attributes_wrapper">
+            <label for="charisma">Charisma</label>
+            <input id="charismaInput" name="charisma" type="number" readonly disabled>
+            <label for="speed">Speed</label>
+            <input id="speedInput" name="speed" type="number" readonly disabled>
+            <label for="strength">Strength</label>
+            <input id="strengthInput" name="strength" type="number" readonly disabled>
+            <label for="wisdom">Wisdom</label>
+            <input id="wisdomInput" name="wisdom" type="number" readonly disabled>
+          </div>
+        </section>
+        <section class="section skills_section">
+          <div class="input_wrapper available_points_wrapper">
+            <label for="availablePoints">Available Points:</label>
+            <input id="available_points_input" name="availablePoints" type="number" readonly disabled>
+          </div>
+          <div class="input_wrapper skills_wrapper">
+            <label for="bladedWeapons">Bladed Weapons</label>
+            <input class="skill_input" id="bladed_weapons_input" name="bladedWeapons" type="number">
+            <label for="darkMagic">Dark Magic</label>
+            <input class="skill_input" id="dark_magic_input" name="darkMagic" type="number">
+            <label for="heavyArmor">Heavy Armor</label>
+            <input class="skill_input" id="heavy_armor_input" name="heavyArmor" type="number">
+            <label for="leadership">Leadership</label>
+            <input class="skill_input" id="leadership_input" name="leadership" type="number">
+            <label for="lightArmor">Light Armor</label>
+            <input class="skill_input" id="light_armor_input" name="lightArmor" type="number">
+            <label for="lightMagic">Light Magic</label>
+            <input class="skill_input" id="light_magic_input" name="lightMagic" type="number">
+            <label for="marksman">Marksman</label>
+            <input class="skill_input" id="marksman_input" name="marksman" type="number">
+            <label for="perception">Perception</label>
+            <input class="skill_input" id="perception_input" name="perception" type="number">
+            <label for="polearms">Polearms</label>
+            <input class="skill_input" id="polearms_input" name="polearms" type="number">
+            <label for="speechcraft">Speechcraft</label>
+            <input class="skill_input" id="speechcraft_input" name="speechcraft" type="number">
+            <label for="trade">Trade</label>
+            <input class="skill_input" id="trade_input" name="trade" type="number">
+            <label for="unarmedCombat">Unarmed Combat</label>
+            <input class="skill_input" id="unarmed_combat_input" name="unarmedCombat" type="number">
+          </div>
+        </section>
+        <section class="section unique_section">
+          <div class="unique_wrapper">
+            <h5 class="sexy_font">Strengths</h5>
+            <ul class="bonus_list">
+            </ul>
+            <h5 class="sexy_font">Weakness</h5>
+            <ul class="weakness_list">
+            </ul>
+          </div>
+        </section>
+        <section class="section description_section">
+          <div class="description_wrapper">
+            <p class="ancient_font description_text">Loading...</p>
+          </div>
+        </section>
+        <section class="section submit_section">
+          <div class="submit_btn_wrapper">
+            <button id="submitButton">Create Character</button>
+          </div>
+        </section>
+      </form>
+      <div class="error_root">
+        <!-- Errors will populate here -->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_content">
+        <p class="sexy_font">Copyright 2020 wubs stuff</p>
+      </div>
+    </footer>
+  </body>
+</html>
